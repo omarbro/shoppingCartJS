@@ -282,3 +282,7 @@ body{
   color: #D2042D;
   font-weight: 800;
 }
+
+i{
+  cursor: pointer;
+}
