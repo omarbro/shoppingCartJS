@@ -82,13 +82,14 @@ let increment=(id)=>{
 let decrement=(id)=>{
   let searchId = basket.find((x)=>x.id === id);
   if(searchId === undefined){
-    throw new Error('there is no added item');
+    return;
   }
   if(searchId.quan === 0 ) return;
   
   searchId.quan -= 1;
-  localStorage.setItem("shopping", JSON.stringify(basket));
   update(id);
+  basket = basket.filter((x)=> x.quan !== 0);
+  localStorage.setItem("shopping", JSON.stringify(basket));
 };
 let update =(id)=>{
   let searchId = basket.find((x)=>x.id === id);
