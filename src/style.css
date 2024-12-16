@@ -211,6 +211,7 @@ body{
   font-weight: 400;
   padding: 25px 60px; 
   margin-bottom: 30px;
+  align-items: center;
 }
 .cart {
   position: relative;
@@ -240,6 +241,7 @@ body{
   grid-template-columns: repeat(4, 223px);
   gap:30px;
   justify-content: center;
+  margin-bottom: 20px;
 }
 @media(max-width:1000px){
   .shop{
@@ -309,8 +311,6 @@ a{
 }
 
 .shopping-cart{
-  
-  border: 2px solid;
   display: grid;
   grid-template-columns: repeat(1, 320px);
   justify-content: center;
@@ -321,21 +321,38 @@ a{
   border: 2px solid;
   border-radius: 5px;
   display: flex;
+  border-color: #FFD700;
+  align-items: center;
+  gap: 10px;
+}
+.cart-items img{
+  border: 2px solid #FFD700;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px; 
+}
+.cart-details{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .title-price-x{
-  
   align-items: center;
   display: flex;
   justify-content: space-between;
-  border: 2px solid;
-  width: 220px;
+  width: 200px;
+  height: 50%;
+  padding-right: 6px;
+  /* border: 2px solid; */
 }
 
 .price-title{
   align-items: center;
   display: flex;
-  gap: 25px;
+  gap: 15px;
+  /* border: 2px solid; */
   
 }
 .cart-price{
@@ -343,4 +360,45 @@ a{
   color: #FFC300;
   padding: 3px;
   border-radius: 3px ;
+}
+
+.cart-buttons{
+  /* border: 2px solid; */
+  display: flex;
+  gap: 10px;
+}
+/* Checkout button styles */
+.checkOut {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #28a745; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.checkOut:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Clear All button styles */
+.clearAll {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #dc3545; /* Red */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.clearAll:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: scale(1.05); /* Slight zoom effect */
 }
